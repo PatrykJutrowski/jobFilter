@@ -81,9 +81,12 @@ fetch('/data.json')
 
         }
         const buttons = document.querySelectorAll('button');
+        const activeStates = document.getElementById('activeStates');
         buttons.forEach(button =>{
             button.addEventListener('click', function (){
-                alert("clicked")
+                const newActiveState = document.createElement('button');
+                newActiveState.innerHTML = buttons.value
+                activeStates.appendChild(newActiveState);
             })
         })
     })
